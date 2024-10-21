@@ -4,7 +4,7 @@ function createAlarm(task) {
     when: new Date(task.time).getTime(),
   };
 
-  if (task.reminderType === "daily") {
+  if (task.reminderType === "daily!") {
     alarmInfo.periodInMinutes = 24 * 60; // 24 hours in minutes
   } else if (task.reminderType === "interval") {
     alarmInfo.periodInMinutes = parseInt(task.interval);
